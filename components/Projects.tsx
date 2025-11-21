@@ -6,6 +6,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects: React.FC = () => {
   const { t } = useLanguage();
+  const UPDATES_URL = "https://updates.team.xtyin.com";
   
   return (
     <section id={SectionId.PROJECTS} className="py-24 bg-[#020617]">
@@ -16,7 +17,7 @@ const Projects: React.FC = () => {
             <p className="text-slate-400">{t.projects.desc}</p>
           </div>
           <a 
-            href="https://lyxyy.notion.site/teamupdates"
+            href={UPDATES_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -33,7 +34,7 @@ const Projects: React.FC = () => {
           className="w-full h-[800px] bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden relative shadow-2xl"
         >
            <iframe 
-              src="https://lyxyy.notion.site/teamupdates"
+              src={UPDATES_URL}
               title="Team Updates"
               className="w-full h-full border-0"
               loading="lazy"
@@ -42,7 +43,7 @@ const Projects: React.FC = () => {
         
         <div className="mt-8 text-center md:hidden">
             <a 
-            href="https://lyxyy.notion.site/teamupdates"
+            href={UPDATES_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
